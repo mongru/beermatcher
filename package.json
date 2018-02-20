@@ -2,7 +2,7 @@
   "name": "beermatcher",
   "version": "1.0",
   "private": true,
-  "homepage" : "http://mongru.github.io/beermatcher",
+  "homepage" : "https://mongru.github.io/beermatcher",
   "dependencies": {
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.1",
