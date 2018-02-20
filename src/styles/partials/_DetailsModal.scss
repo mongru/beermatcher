@@ -27,7 +27,7 @@
 
         &:hover {
             color: darken($accentColor, 10%);
-            animation: spin 1s ease-in-out ;
+            animation: halfspin 0.3s ease-in-out ;
         }
     }
 
@@ -155,7 +155,7 @@
     }
 }
 
-@keyframes spin {
+@keyframes halfspin {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    100% { transform: rotate(180deg); }
 }

@@ -226,7 +226,7 @@ table {
   cursor: pointer; }
   .modal--btn:hover {
     color: #f2af02;
-    animation: spin 1s ease-in-out; }
+    animation: halfspin 0.3s ease-in-out; }
 
 .modal--img img {
   height: 40vh;
@@ -320,11 +320,11 @@ table {
     .modal--seemore-box img {
       height: 10vh; }
 
-@keyframes spin {
+@keyframes halfspin {
   0% {
     transform: rotate(0deg); }
   100% {
-    transform: rotate(360deg); } }
+    transform: rotate(180deg); } }
 
 /* ENDSCREEN STYLES */
 .endscreen--info-box {
