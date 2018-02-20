@@ -1,0 +1,50 @@
+/* HEADER STYLES */
+
+.header {
+
+    &__logo {
+        padding: 60px 0 10px 20px;
+        color: $mainColor;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        span {
+            color: $accentColor;
+        }
+    }
+
+    &__credits {
+        padding: 0 0 20px 20px;
+        color: lighten($mainColor, 20%);
+        font-weight: 300;
+        font-size: 0.7rem;
+        line-height: 1rem;
+        text-rendering: optimizeLegibility;
+        letter-spacing: 1px;
+
+        a {
+            text-decoration: none;
+            color: lighten($accentColor, 10%);
+            font-weight: 600;
+            text-transform: uppercase;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                background-color: lighten($accentColor, 10%);
+                transition: width .3s;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+
+    }
+}

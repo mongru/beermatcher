@@ -1,0 +1,46 @@
+/* BEERTILE STYLES */
+
+.main__content {
+
+    &--beertile {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 240px;
+        margin: 20px;
+        padding: 20px;
+        background-color: $white;
+        border-radius: 4px;
+
+        &:hover {
+            transform: scale(1.04);
+            transition: ease 0.4s;
+            box-shadow: 2px 2px 8px darken($secondaryColor, 5%);
+            cursor: pointer;
+        }
+
+        img {
+            height: 140px;
+            padding: 10px;
+        }
+
+        h2 {
+            color: $accentColor;
+            font-size: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            padding: 10px;
+        }
+
+        p {
+            color: $mainColor;
+            font-weight: 300;
+            font-size: 0.7rem;
+            text-align: center;
+            line-height: 1rem;
+            text-rendering: optimizeLegibility;
+            letter-spacing: 1px;
+        }
+    }
+}

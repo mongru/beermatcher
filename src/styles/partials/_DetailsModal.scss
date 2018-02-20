@@ -1,0 +1,161 @@
+/* MODAL STYLES */
+
+.main__content--modal {
+    background-color: $white;
+    border-radius: 4px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 80%;
+
+    @include respond-to($desktop) {
+        height: 90%;
+    }
+}
+
+.modal {
+    &--btn {
+        float: right;
+        clear: both;
+        font-size: 2rem;
+        font-weight: 700;
+        color: $accentColor;
+        margin-top: 1rem;
+        margin-right: 2rem;
+        border-style: none;
+        background: none;
+        cursor: pointer;
+
+        &:hover {
+            color: darken($accentColor, 10%);
+            animation: spin 1s ease-in-out ;
+        }
+    }
+
+    &--img {
+        img {
+            height: 40vh;
+            padding: 20px;
+
+            @include respond-to($tablet-portrait) {
+                height: 30vh;
+            }
+            @include respond-to($desktop) {
+                height: 36vh;
+            }
+        }
+    }
+
+    &--wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 7% 14%;
+
+        @include respond-to($desktop) {
+            flex-direction: row;
+        }
+    }
+
+    &--info {
+        display: flex;
+        flex-direction: column;
+        color: $mainColor;
+            &::after {
+                content: ' ';
+                width: 100%;
+                height: 4px;
+                background-color: $accentColor;
+        }
+
+        @include respond-to($desktop) {
+            justify-content: center;
+            padding: 0 14%;
+        }
+
+        &-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: $accentColor;
+            letter-spacing: 0.1rem;
+
+            @include respond-to($desktop) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &-description,
+        &-tagline,
+        &-details {
+            font-size: 0.7rem;
+            font-weight: 300;
+            text-rendering: optimizeLegibility;
+            line-height: 1rem;
+            padding-bottom: 0.6rem;
+
+            span {
+                font-weight: 700;
+                margin: 0.4rem;
+            }
+
+            @include respond-to($desktop) {
+                font-size: 1rem;
+                line-height: 1.6rem;
+            }
+        }
+    }
+
+    &--seemore {
+        display: flex;
+        flex-direction: column;
+        padding: 0 14%;
+
+        span {
+            font-size: 0.8rem;
+            padding-top: 1rem;
+            font-weight: 700;
+            color: $mainColor;
+        }
+
+        &-gallery {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 14%;
+
+            @include respond-to($tablet-portrait) {
+                flex-direction: row;
+            }
+            @include respond-to($desktop) {
+                flex-direction: row;
+            }
+        }
+
+        &-box {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            padding: 1rem;
+            margin: 0.5rem;
+            border: 1px solid $secondaryColor;
+            width: 100%;
+            cursor: pointer;
+
+            &:hover {
+                transition: 0.3s ease-out;
+                box-shadow: 2px 2px 8px darken($secondaryColor, 5%);
+                transform: scale3d(1.1,1.1,1.1);
+            }
+
+            img {
+                height: 10vh;
+            }
+        }
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

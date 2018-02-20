@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto+Mono:400&subset=latin-ext');
+
+@import 'styles/modules/all';
+@import 'styles/partials/Header';
+@import 'styles/partials/BeerTile';
+@import 'styles/partials/Loader';
+@import 'styles/partials/DetailsModal';
+@import 'styles/partials/EndScreen';
+@import 'styles/partials/Footer';
+
+
+body {
+    background-color: $secondaryColor;
+    font-family: $mainFont;
+    overflow-x: hidden;
+}

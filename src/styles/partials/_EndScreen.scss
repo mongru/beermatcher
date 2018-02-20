@@ -1,0 +1,19 @@
+/* ENDSCREEN STYLES */
+
+.endscreen {
+
+    &--info-box {
+        display: flex;
+        justify-content: center;
+        padding: 60px 0 20px 20px;
+        color: $mainColor;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        span {
+            color: $accentColor;
+            padding: 0 1rem;
+        }
+    }
+}

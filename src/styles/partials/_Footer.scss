@@ -1,0 +1,30 @@
+/* FOOTER STYLES */
+
+.footer {
+
+    &--info-box {
+        position: fixed;
+        top: 50%;
+        left: -14%;
+        color: darken($secondaryColor, 10%);
+        font-weight: 300;
+        font-size: 0.6rem;
+        text-align: center;
+        line-height: 1rem;
+        text-rendering: optimizeLegibility;
+        transform: rotate(90deg);
+
+        @include respond-to($tablet-portrait) {
+            left: -7%;
+        }
+        @include respond-to($desktop) {
+            left: -3%;
+        }
+
+        a {
+            text-decoration: none;
+            color: darken($secondaryColor, 20%);
+            margin-left: 0.4rem;
+        }
+    }
+}
