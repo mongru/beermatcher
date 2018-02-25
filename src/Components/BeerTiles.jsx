@@ -3,33 +3,12 @@ import React from 'react';
 import BeerTile from './BeerTile.jsx';
 
 
-class BeerTiles extends React.Component {
-
-    onScroll = () => {
-        if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 500) && this.props.beerList.length) {
-            this.props.onPaginatedLoad();
-        }
-    }
-
-    componentDidMount() {
-        window.addEventListener('scroll', this.onScroll, false);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.onScroll, false);
-    }
-
-    render() {
-
-        const { beerList } = this.props;
-        
-
+const BeerTiles = ({ beerList }) => {
         return (
             <div className="container">
                 <div className="row">
-                    {beerList.map((beer, i) =>
-                        <div className="col-4" key={i}>
-
+                    { beerList.map((beer, i) =>
+                        <div className="col-4" key={beer.id}>
                             <BeerTile
                                 id={beer.id}
                                 name={beer.name}
@@ -42,12 +21,10 @@ class BeerTiles extends React.Component {
                                 ebc={beer.ebc}
                                 foodPairing={beer.food_pairing}
                             />
-
-                        </div>)}
+                        </div>) }
                 </div>
             </div>
         );
-    };
 }
 
 export default BeerTiles;

@@ -87,24 +87,6 @@ class BeerTile extends React.Component {
                             <ModalBeerTile
                                 abv={this.props.abv}
                             />
-                            {/* <div className="modal--seemore-box">
-                                <figure>
-                                    <img src={this.props.image} alt="similiar beer"/>
-                                </figure>
-                                <span>{this.props.name}</span>
-                            </div>
-                            <div className="modal--seemore-box">
-                                <figure>
-                                    <img src={this.props.image} alt="similiar beer"/>
-                                </figure>
-                                <span>{this.props.name}</span>
-                            </div>
-                            <div className="modal--seemore-box">
-                                <figure>
-                                    <img src={this.props.image} alt="similiar beer"/>
-                                </figure>
-                                <span>{this.props.name}</span>
-                            </div> */}
                         </div>
                     </div>
 

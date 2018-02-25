@@ -303,6 +303,7 @@ table {
       .modal--seemore-gallery {
         flex-direction: row; } }
   .modal--seemore-box {
+    height: 150px;
     display: flex;
     justify-content: center;
     flex-direction: column;
