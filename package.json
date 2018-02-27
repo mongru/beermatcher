@@ -2,7 +2,6 @@
   "name": "beermatcher",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mongru.github.io/beermatcher",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "node-sass-chokidar": "0.0.3",
