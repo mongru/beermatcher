@@ -1,4 +1,5 @@
 import React from 'react';
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './App.css';
 
 import Header from './Components/Header.jsx';
@@ -19,6 +20,7 @@ import Footer from './Components/Footer.jsx';
 //   page: 1,
 //   isLoading: false
 // });
+
 
 const getBeerUrl = (page) => `https://api.punkapi.com/v2/beers?page=${page}&per_page=20`;
 
@@ -114,16 +116,17 @@ class App extends React.Component {
     }
 
     render() {
+        const { beerList, page, isLoading, noMoreData } = this.state;
         return (
             <div className="main__wrapper">
                 <Header/>
                 <main>
                     <BeerTiles
-                        beerList={this.state.beerList}
-                        page={this.state.page}
+                        beerList={beerList}
+                        page={page}
                     />
-                        { this.state.isLoading && <Loader /> }
-                        { this.state.noMoreData && <EndScreen /> }
+                        { isLoading && <Loader /> }
+                        { noMoreData && <EndScreen /> }
                 </main>
                 <Footer/>
             </div>

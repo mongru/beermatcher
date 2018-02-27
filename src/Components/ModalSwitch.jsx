@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter as Switch, Route } from "react-router-dom";
 
-import App from './App.js';
-import DetailsModal from './Components/DetailsModal.jsx';
+import App from '../App.js';
+import DetailsModal from './DetailsModal.jsx';
+import BeerView from './BeerView.jsx';
+
 
 class ModalSwitch extends React.Component {
   // We can pass a location to <Switch/> that will tell it to
@@ -12,13 +12,13 @@ class ModalSwitch extends React.Component {
   // prop instead.
   //
   // We can also use "location state" to tell the app the user
-  // wants to go to `/details/1` in a modal, rather than as the
+  // wants to go to `/img/2` in a modal, rather than as the
   // main page, keeping the gallery visible behind it.
   //
-  // Normally, `/details/1` wouldn't match the gallery at `/`.
+  // Normally, `/img/2` wouldn't match the gallery at `/`.
   // So, to get both screens to render, we can save the old
   // location and pass it to Switch, so it will think the location
-  // is still `/` even though its `/deatils/1`.
+  // is still `/` even though its `/img/2`.
   previousLocation = this.props.location;
 
   componentWillUpdate(nextProps) {
@@ -43,7 +43,7 @@ class ModalSwitch extends React.Component {
       <div>
         <Switch location={isModal ? this.previousLocation : location}>
           <Route exact path="/" component={App} />
-          {/* <Route path="/details/:id" component={DetailsModal} /> */}
+          <Route path="/details/:id" component={BeerView} />
         </Switch>
         {isModal ? <Route path="/details/:id" component={DetailsModal} /> : null}
       </div>
@@ -51,14 +51,4 @@ class ModalSwitch extends React.Component {
   }
 }
 
-
-ReactDOM.render(
-    <Router>
-        <Route component={ModalSwitch} />
-    </Router>, document.getElementById('root'));
-
-if(module.hot) {
-    module.hot.accept()
-}
-
-registerServiceWorker();
+export default ModalSwitch;

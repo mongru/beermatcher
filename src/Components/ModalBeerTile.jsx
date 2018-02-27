@@ -29,7 +29,7 @@ class ModalBeerTile extends React.Component {
                     isLoading: false
                 });
             })
-            .catch(err => err);
+            .catch(err => console.log(err));
     }
 
     componentDidMount() {
@@ -37,22 +37,21 @@ class ModalBeerTile extends React.Component {
     }
 
     render() {
-
         const { isLoading, simBeerImg, simBeerName } = this.state;
 
         if (isLoading)
-         return (
+            return (
              <div className="modal--seemore-box">
                 <Loader />
              </div>
-         );
+            );
 
         return (
             <div className="modal--seemore-box">
                 <figure>
-                    <img src={ simBeerImg } alt="similar beer"/>
+                    <img src={simBeerImg} alt="similar beer"/>
                 </figure>
-                <span>{ simBeerName }</span>
+                <span>{simBeerName}</span>
             </div>
         );
     }
